@@ -23,11 +23,13 @@ public class MainManager : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    // ABSTRACTION
     public void StartGame()
     {
         SceneManager.LoadScene(1);
     }
 
+    // ABSTRACTION
     public void ExitGame()
     {
 #if UNITY_EDITOR
