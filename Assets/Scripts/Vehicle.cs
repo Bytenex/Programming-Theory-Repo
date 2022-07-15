@@ -1,18 +1,18 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class Vehicle : MonoBehaviour
+abstract public class Vehicle : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] float maxSpeed;
+    // ENCAPSULATION
+    [SerializeField] public float speed { get; private set; }
+    [SerializeField] float turnSpeed;
+
+    private void Update()
     {
-        
+        TurnVehicle();
+        MoveVehicle();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    protected abstract void MoveVehicle();
+    protected abstract void TurnVehicle();
 }
