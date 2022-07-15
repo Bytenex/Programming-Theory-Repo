@@ -2,10 +2,10 @@ using UnityEngine;
 
 abstract public class Vehicle : MonoBehaviour
 {
-    [SerializeField] float maxSpeed;
+    [SerializeField] protected float maxSpeed;
     // ENCAPSULATION
     [SerializeField] public float speed { get; private set; }
-    [SerializeField] float turnSpeed;
+    [SerializeField] protected float turnSpeed;
 
     private void Update()
     {
